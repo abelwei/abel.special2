@@ -1,7 +1,7 @@
 package general
 
 import (
-	"abel.special2/general/encode"
+	"github.com/abelwei/abel.special2/general/encode"
 	"bytes"
 	"github.com/sirupsen/logrus"
 	"os/exec"

@@ -1,4 +1,4 @@
-module abel.special2
+module github.com/abelwei/abel.special2
 
 go 1.13
 
