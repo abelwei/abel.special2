@@ -139,3 +139,27 @@ func Template2Text(textTmpl string, srtDefault interface{}) (err error, rst stri
 	return
 }
 
+func GetFileNameExt(filePath string) (filenameFull, filenameOnly, fileExt string) {
+	filenameFull = path.Base(filePath)
+	fileExt = path.Ext(filenameFull)
+	filenameOnly = strings.TrimSuffix(filenameFull, fileExt)
+	return
+}
+
+func GetFileNameFull(filePath string) string {
+	str, _, _ := GetFileNameExt(filePath)
+	return str
+}
+
+func GetFileExt(filePath string) string {
+	_, _,str := GetFileNameExt(filePath)
+	if str != "" {
+		str = str[1:]
+	}
+	return str
+}
+
+func GetFileNameOnly(filePath string) string {
+	_, str,_ := GetFileNameExt(filePath)
+	return str
+}
