@@ -59,3 +59,14 @@ func IsJson(str string) bool {
 	var jsn json.RawMessage
 	return json.Unmarshal([]byte(str), &jsn) == nil
 }
+
+//将切片数组转为分隔符的字符串
+func Slice2Separator(sli []string) (str string) {
+	for _, val := range sli {
+		str = str + val + "."
+	}
+	if str != "" {
+		str = str[:len(str)-1]
+	}
+	return
+}
